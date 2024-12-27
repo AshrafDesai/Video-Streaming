@@ -1,3 +1,5 @@
+![alt text](image.png)
+
 # Video Streaming Application
 
 A React-based video streaming application that supports HLS (HTTP Live Streaming) playback using Video.js.
