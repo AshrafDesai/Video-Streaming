@@ -53,11 +53,49 @@ npm run dev
 
 The application will be available at:
 
-```sh
+```
 
 - Frontend: http://localhost:5173
 
 - Backend: http://localhost:8000
 
 ```
+# Video Streaming API
 
+Backend service running on http://localhost:8000
+
+## Endpoints 
+
+- Upload Video:
+
+Convert and upload a video file to HLS format.
+
+```sh
+POST /upload
+Content-Type: multipart/form-data
+```
+- Parameter:
+  -file (required): Video file to be uploaded
+- Response:
+```sh
+{
+  "message": "Video converted to HLS format",
+  "videoUrl": "http://localhost:8000/uploads/courses/{lessonId}/index.m3u8",
+  "lessonId": "uuid-string"
+}
+```
+
+- Stream Video
+
+Get HLS video stream.
+
+```sh
+GET /uploads/courses/{lessonId}/index.m3u8
+```
+
+- Parameters:
+  -lessonId (required): UUID of the video lesson
+
+- Responses:
+  - Content-Type: application/x-mpegURL
+  - Returns HLS manifest file
