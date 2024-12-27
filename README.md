@@ -1,4 +1,5 @@
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/75e681a9-03a3-4b20-a564-88e848f9b6c6)
+
 
 # Video Streaming Application
 
